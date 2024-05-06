@@ -11,7 +11,7 @@
 * --> Öncelikle ASP.NET Core Identity‘i kullanmak istediğimiz projeye altyapıyı sağlayacak gerekli Microsoft.AspNetCore.Identity.EntityFrameworkCore ve Microsoft.EntityFrameworkCore.SqlServer NuGet paketlerini kuralım.
 
 ** Öncellikle IdentityUser Sınıfında hangi propert ' ler var inceleyelim
-<markdown>
+<code>
 public class IdentityUser
 {
     public string Id { get; set; }
@@ -28,5 +28,5 @@ public class IdentityUser
     public int AccessFailedCount { get; set; }
     // Diğer özellikler
 }
-</markdown>
+</code>
 
