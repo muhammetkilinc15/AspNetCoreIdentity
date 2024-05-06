@@ -23,11 +23,6 @@
 ![Screenshot 2024-05-06 121834](https://github.com/muhammetkilinc15/AspNetCoreIdentity/assets/108901980/76517187-b8be-4779-ba7c-905d9ea1861d)
 
 -- Identity Tabloları --
-<ul>
-    <li> Id : Her bir kullanıcıya denk düşen primary key kolonudur. </li>
-        <li> UserName : Her bir kullanıcıya denk düşen primary key kolonudur. </li>
-        <li> NormalizedUserName : Her bir kullanıcıya denk düşen primary key kolonudur. </li>
-        <li> Email : Her bir kullanıcıya denk düşen primary key kolonudur. </li>
-</ul>
 
+![Screenshot 2024-05-06 200433](https://github.com/muhammetkilinc15/AspNetCoreIdentity/assets/108901980/f5eef6e3-643f-4706-9992-a1aa95897025)
 
