@@ -8,25 +8,26 @@
 ------------------------------------------------------------------------------------------------
 
 * <mark>Identity Kurulumu için</mark>
-* --> Öncelikle ASP.NET Core Identity‘i kullanmak istediğimiz projeye altyapıyı sağlayacak gerekli Microsoft.AspNetCore.Identity.EntityFrameworkCore ve Microsoft.EntityFrameworkCore.SqlServer NuGet paketlerini kuralım.
+* Öncelikle ASP.NET Core Identity‘i kullanmak istediğimiz projeye altyapıyı sağlayacak gerekli Microsoft.AspNetCore.Identity.EntityFrameworkCore ve Microsoft.EntityFrameworkCore.SqlServer NuGet paketlerini kuralım.
 
-** Öncellikle IdentityUser Sınıfında hangi propert ' ler var inceleyelim
-<code>
-public class IdentityUser
-{
-    public string Id { get; set; }
-    public string UserName { get; set; }
-    public string NormalizedUserName { get; set; }
-    public string Email { get; set; }
-    public string NormalizedEmail { get; set; }
-    public bool EmailConfirmed { get; set; }
-    public string PasswordHash { get; set; }
-    public string SecurityStamp { get; set; }
-    public string ConcurrencyStamp { get; set; }
-    public DateTimeOffset? LockoutEnd { get; set; }
-    public bool LockoutEnabled { get; set; }
-    public int AccessFailedCount { get; set; }
-    // Diğer özellikler
-}
-</code>
+
+--> Şimdi Entity Layer Katmanında kendi AppUser sınıfımızı oluşturuyoruz(bu zorunlu değil ancak kendimiz ekstra özellikler eklemek isteyebilirz)
+
+![Screenshot 2024-05-06 121058](https://github.com/muhammetkilinc15/AspNetCoreIdentity/assets/108901980/548aeef2-cc70-46a7-872a-711e8458f045)
+
+--> Sonrasında DbContext sınıfımızı IdentityDbContext<TUser, TRole, TKey> generic sınıfından inherit alacak şekilde oluşturalım.
+
+![Screenshot 2024-05-06 121355](https://github.com/muhammetkilinc15/AspNetCoreIdentity/assets/108901980/d5740a76-ad71-49bb-8798-c3ce1cb874bd)
+
+--> Oluşturduğumuz DbContext ve Identity API ile ilgili servis ayarlarını Program.cs içerisinden ayarlayalım.
+![Screenshot 2024-05-06 121834](https://github.com/muhammetkilinc15/AspNetCoreIdentity/assets/108901980/76517187-b8be-4779-ba7c-905d9ea1861d)
+
+-- Identity Tabloları --
+<ul>
+    <li> Id : Her bir kullanıcıya denk düşen primary key kolonudur. </li>
+        <li> UserName : Her bir kullanıcıya denk düşen primary key kolonudur. </li>
+        <li> NormalizedUserName : Her bir kullanıcıya denk düşen primary key kolonudur. </li>
+        <li> Email : Her bir kullanıcıya denk düşen primary key kolonudur. </li>
+</ul>
+
 
